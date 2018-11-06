@@ -1,3 +1,7 @@
+
+Kanban : https://tree.taiga.io/project/omniprezz-alumnis-simplon/kanban
+
+
 # alumnis2
 La suite tant attendue du projet Alumnis
 
