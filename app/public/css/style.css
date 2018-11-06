@@ -1,0 +1,66 @@
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////App Alumnis//////////////////////////////// */
+.homeTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    color: #e80041;
+}
+
+nav {
+    background-color: #e80041;
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar {
+    height: 100vh;
+}
+
+.divbloc {
+    height: 12vh;
+}
+
+.divside {
+    height: 88vh;
+    background-color: #e80041;
+}
+
+hr {
+    width: 180px;
+    background-color: white;
+}
+
+main {
+    margin-top: 80px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.sidebar .btn-dark {
+    width: 150px;
+}
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////@MEDIA//////////////////////////////// */
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+	
+}
+
+@media (max-width: 576px) {
+
+
+}
