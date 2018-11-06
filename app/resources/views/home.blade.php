@@ -2,6 +2,6 @@
 
 @section('content')
 <div class="container">
-    HELLO
+    HELLO SUR ALUMNIS SIMPLON
 </div>
 @endsection

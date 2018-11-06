@@ -123,5 +123,36 @@ class DatabaseSeeder extends Seeder
             'email' => 'cyril@cyril.com',
             'password' => bcrypt('cyril31')
         ]);
+
+
+        //CATEGORIES
+
+        DB::table('categories')->insert([
+            'name' => "Culture Tech"
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => "Développement"
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => "Data"
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => "Système et réseaux"
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => "Compétences"
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => "Codes de l'entreprise"
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => "Divers"
+        ]);
     }
 }

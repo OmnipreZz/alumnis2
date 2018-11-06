@@ -95,7 +95,7 @@
                         <h2 class="pt-4 mb-3">{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</h2>
                         <h3>{{ Auth::user()->promo }}</h3>
                         <hr class="mt-4 mb-5">
-                        <button type="button" class="btn btn-dark mb-3">Edit Profil</button><br>
+                        <button type="button" class="btn btn-dark mb-3">Mon Profil</button><br>
                         <button type="button" class="btn btn-dark mb-3">Mes Favoris</button><br>
                         <button type="button" class="btn btn-dark mb-3">Nouvel Article</button><br>
                         <button type="button" class="btn btn-dark mb-3">Nouvelle Annonce</button><br>
@@ -105,7 +105,7 @@
                     @yield('content')
                 </main>
             </div>
-        </div>  
+        </div> 
     </div>
 </body>
 </html>
