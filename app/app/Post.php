@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class Post extends Model
 {
@@ -14,7 +15,7 @@ class Post extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'content', 'category_id', 'user_id'
+        'title', 'content', 'author', 'category_id', 'user_id'
     ];
 
     public function user()

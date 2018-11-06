@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -14,7 +16,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::with('category')->where('category_id', 1)->orderBy('id', 'desc')->get();
+        return view('post.index', compact('posts'));
     }
 
     /**
@@ -24,7 +27,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::orderBy('name')->get();
+        return view('post.create', compact('categories'));
     }
 
     /**
@@ -35,7 +39,15 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = Post::create([
+            'title' => $request->input('title'),
+            'content' => $request->input('content'),
+            'author' => Auth::user()->firstname. " " .Auth::user()->lastname,
+            'user_id' => Auth::user()->id,
+            'category_id' => $request->input('category'),
+        ]);
+
+        return redirect()->route('post_index');
     }
 
     /**

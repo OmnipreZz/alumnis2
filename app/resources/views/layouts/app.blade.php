@@ -37,7 +37,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mx-auto">
                         <li>
-                            <a class="nav-link text-white mr-3" href="">Le Blog</a>
+                            <a class="nav-link text-white mr-3" href="{{ route('post_index') }}">Le Blog</a>
                         </li>
                         <li>
                             <a class="nav-link text-white mr-3" href="">Les Annonces</a>
@@ -95,10 +95,10 @@
                         <h2 class="pt-4 mb-3">{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</h2>
                         <h3>{{ Auth::user()->promo }}</h3>
                         <hr class="mt-4 mb-5">
-                        <button type="button" class="btn btn-dark mb-3">Mon Profil</button><br>
-                        <button type="button" class="btn btn-dark mb-3">Mes Favoris</button><br>
-                        <button type="button" class="btn btn-dark mb-3">Nouvel Article</button><br>
-                        <button type="button" class="btn btn-dark mb-3">Nouvelle Annonce</button><br>
+                        <a type="button" class="btn btn-dark mb-3">Mon Profil</a><br>
+                        <a type="button" class="btn btn-dark mb-3">Mes Favoris</a><br>
+                        <a type="button" class="btn btn-dark mb-3" href="{{ route('post_create') }}">Nouvel Article</a><br>
+                        <a type="button" class="btn btn-dark mb-3">Nouvelle Annonce</a><br>
                     </div>
                 </div>
                 <main class="col-9">
