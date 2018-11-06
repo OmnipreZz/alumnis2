@@ -17,7 +17,17 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::with('category')->where('category_id', 1)->orderBy('id', 'desc')->get();
-        return view('post.index', compact('posts'));
+        $categories = Category::orderBy('name')->get();
+        $hisCategory = 1;
+        return view('post.index', compact('posts', 'categories', 'hisCategory'));
+    }
+
+    public function indexByCat(Request $request)
+    {
+        $categories = Category::orderBy('name')->get();
+        $posts = Post::with('category')->where('category_id', $request->input('category') )->orderBy('id', 'desc')->get();
+        $hisCategory = $request->input('category');
+        return view('post.index', compact('posts', 'categories', 'hisCategory'));
     }
 
     /**
@@ -42,6 +52,7 @@ class PostController extends Controller
         $post = Post::create([
             'title' => $request->input('title'),
             'content' => $request->input('content'),
+            'img' => $request->input('img'),
             'author' => Auth::user()->firstname. " " .Auth::user()->lastname,
             'user_id' => Auth::user()->id,
             'category_id' => $request->input('category'),

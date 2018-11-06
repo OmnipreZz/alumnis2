@@ -33,6 +33,15 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="img" class="col-md-4 col-form-label text-md-right">{{ __('URL Image') }} :</label>
+
+                            <div class="col-md-6">
+                                <input type="url" id="img" class="form-control" name="img" placeholder="https://" required style="resize:none;"></input>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="category"class="col-md-4 col-form-label text-md-right">{{ __('Catégorie') }} :</label>
                             <select name="category" class="form-control col-md-6" id="category">
                             

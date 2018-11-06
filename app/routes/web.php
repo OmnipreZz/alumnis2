@@ -18,6 +18,7 @@ Route::get('/', 'HomeController@index')->name('home')->middleware('auth');
 
 
 Route::get('/articles', 'PostController@index' )->name('post_index')->middleware('auth');
+Route::Post('/articles/categorie','PostController@indexByCat')->name('post_category')->middleware('auth');
 
 Route::get('/articles/nouveau', 'PostController@create')->name('post_create')->middleware('auth');
 Route::post('/articles/store', 'PostController@store')->name('post_store')->middleware('auth');

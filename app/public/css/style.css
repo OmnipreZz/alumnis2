@@ -34,7 +34,7 @@ hr {
 }
 
 main {
-    margin-top: 80px;
+    margin-top: 12vh;
 }
 
 li {
@@ -43,6 +43,31 @@ li {
 
 .sidebar .btn-dark {
     width: 150px;
+}
+
+.postCat {
+    background-color: #e80041;
+    height: 15vh;
+}
+
+.lightMain {
+    height: 12vh;
+    z-index: 3;
+    background-color: white;
+}
+
+.card {
+    height: 65vh;
+    background-color: #CFD8DC;
+
+}
+
+.card-img-top {
+    height: 40vh;
+}
+
+span {
+    color: 
 }
 /* /////////////////// */
 /* ///////// */

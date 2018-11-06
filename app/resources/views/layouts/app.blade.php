@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     
@@ -26,8 +27,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    <strong>Alumnis Simplon</strong>
+                <a class="navbar-brand font-weight-bold" href="{{ url('/') }}">
+                    Alumnis Simplon
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -37,16 +38,16 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mx-auto">
                         <li>
-                            <a class="nav-link text-white mr-3" href="{{ route('post_index') }}">Le Blog</a>
+                            <a class="nav-link text-white mr-3 font-weight-bold" href="{{ route('post_index') }}">Articles</a>
                         </li>
                         <li>
-                            <a class="nav-link text-white mr-3" href="">Les Annonces</a>
+                            <a class="nav-link text-white mr-3 font-weight-bold" href="">Annonces</a>
                         </li>
                         <li>
-                            <a class="nav-link text-white mr-3" href="">L'Annuaire</a>
+                            <a class="nav-link text-white mr-3 font-weight-bold" href="">Annuaire</a>
                         </li>
                         <li>
-                            <a class="nav-link text-white" href="">La Fondation</a>
+                            <a class="nav-link text-white font-weight-bold" href="">Alumnis fondation</a>
                         </li>
                     </ul>
 
@@ -102,6 +103,7 @@
                     </div>
                 </div>
                 <main class="col-9">
+                    <div class="lightMain fixed-top"></div>
                     @yield('content')
                 </main>
             </div>

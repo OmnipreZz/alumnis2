@@ -126,7 +126,6 @@ class DatabaseSeeder extends Seeder
 
 
         //CATEGORIES
-
         DB::table('categories')->insert([
             'name' => "Culture Tech"
         ]);
