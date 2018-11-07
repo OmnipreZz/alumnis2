@@ -32,7 +32,7 @@
             </div>
             
 
-            <div class="col-8 my-auto mobileCache">
+            <div class="col-md-6 col-lg-8 my-auto mobileCache ml-auto">
                 <form method="POST" action="{{ route('post_category') }}" aria-label="">
                     @csrf
                     <div class="form-group row">
@@ -53,8 +53,7 @@
                 </form>
             </div>
 
-            <div class="col-4 my-auto mobileCache">
-                
+            <div class="col-md-6 col-lg-4 my-auto mobileCache">              
                 <form method="POST" action="{{ route('post_category') }}" aria-label="">
                     @csrf
                     <div class="form-group row">
@@ -70,7 +69,7 @@
 
     <div class="row articles">
         @foreach ($posts as $post)
-        <div class="col-md-12 col-lg-4">
+        <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="card cardArticle my-4 shadow">
                 <img class="card-img-top img1" src="{{ $post->img }}" alt="Card image cap">
                 <div class="card-body">

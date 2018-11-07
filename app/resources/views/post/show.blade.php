@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+    
 @section('content')
 
 <div class="container-fluid home text-center mb-5">

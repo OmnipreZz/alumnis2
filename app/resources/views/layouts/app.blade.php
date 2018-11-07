@@ -113,7 +113,7 @@
                     </div>
                 </div>
 
-                <main class="col-md-12 col-lg-9" id="page-content-wrapper">
+                <main class="col-sm-12 col-md-9" id="page-content-wrapper">
                     @yield('content')
                 </main>
             </div>
