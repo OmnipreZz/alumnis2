@@ -1,11 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid home">
-    HELLO SUR ALUMNIS SIMPLON
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius excepturi dicta velit aperiam sint porro inventore. Accusantium, fuga adipisci assumenda, quidem suscipit nihil, voluptas quia in quisquam eveniet perferendis eos.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. In architecto provident enim accusamus voluptatibus quibusdam quam et impedit magnam explicabo minus accusantium voluptates similique numquam ea odit, labore dolorem dolor.
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto quam incidunt molestiae similique quibusdam consectetur voluptatibus fugit amet asperiores? Quas quo nisi explicabo laborum, suscipit mollitia reprehenderit illo cupiditate. Cum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt tempore neque omnis eligendi corrupti debitis ullam fugiat quidem maiores mollitia, dolorem magni hic ad alias similique ducimus dignissimos accusamus. Ipsam.
+<div class="jumbotron jumbotron-fluid home text-white" style="background-image:url({{url('images/dawn-1840298_1280.jpg')}})">
+  <div class="container">
+    <h1 class="display-4">Bienvenue sur Alumnis Simplon</h1>
+    <p class="lead">La plateforme en ligne des anciens apprenants Simplon</p>
+  </div>
 </div>
 @endsection

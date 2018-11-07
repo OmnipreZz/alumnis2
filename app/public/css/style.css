@@ -1,6 +1,10 @@
 /* /////////////////// */
 /* ///////// */
 /* ////////////////////////////////App Alumnis//////////////////////////////// */
+.jumbotron {
+    height: 80vh;
+    background-size: cover;
+}
 .homeTitle {
     font-family: 'Montserrat', sans-serif;
     font-size: 60px;
