@@ -97,13 +97,13 @@
                         <h3>{{ Auth::user()->promo }}</h3>
                         <hr class="mt-4 mb-5">
                         <a type="button" class="btn btn-dark mb-3">Mon Profil</a><br>
+                        <a type="button" class="btn btn-dark mb-3">Mes Articles</a><br>
                         <a type="button" class="btn btn-dark mb-3">Mes Favoris</a><br>
                         <a type="button" class="btn btn-dark mb-3" href="{{ route('post_create') }}">Nouvel Article</a><br>
                         <a type="button" class="btn btn-dark mb-3">Nouvelle Annonce</a><br>
                     </div>
                 </div>
                 <main class="col-9">
-                    <div class="lightMain fixed-top"></div>
                     @yield('content')
                 </main>
             </div>

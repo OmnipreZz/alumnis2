@@ -22,3 +22,5 @@ Route::Post('/articles/categorie','PostController@indexByCat')->name('post_categ
 
 Route::get('/articles/nouveau', 'PostController@create')->name('post_create')->middleware('auth');
 Route::post('/articles/store', 'PostController@store')->name('post_store')->middleware('auth');
+
+Route::get('/articles/article{id}', 'PostController@show')->name('post_show')->middleware('auth');
