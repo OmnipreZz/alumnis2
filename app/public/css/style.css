@@ -44,7 +44,7 @@ li {
     list-style-type: none;
 }
 
-.sidebar .btn-dark {
+.btnSize {
     width: 150px;
 }
 
@@ -66,7 +66,6 @@ li {
 .cardArticle {
     height: 65vh;
     background-color: #CFD8DC;
-
 }
 
 .img1 {
@@ -76,6 +75,14 @@ li {
 .img2 {
     height: 60vh;
     width: 50vw;
+}
+
+.mobile {
+    display:none;
+}
+
+.mobileDrop {
+    margin-left: 60px;
 }
 /* /////////////////// */
 /* ///////// */
@@ -89,6 +96,26 @@ li {
 }
 
 @media (max-width: 768px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .mobileCache {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .postNav {
+        height: 17vh;
+    }
+
+    .cardArticle {
+        height: 75vh;
+    }
 
 	
 }

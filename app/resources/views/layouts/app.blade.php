@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/main.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -21,16 +22,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/simple-sidebar.css') }}" rel="stylesheet">
     
 </head>
 <body>
-    <div id="app">
+    <div id="wrapper">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand font-weight-bold" href="{{ url('/') }}">
                     Alumnis Simplon
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -96,14 +98,28 @@
                         <h2 class="pt-4 mb-3">{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</h2>
                         <h3>{{ Auth::user()->promo }}</h3>
                         <hr class="mt-4 mb-5">
-                        <a type="button" class="btn btn-dark mb-3">Mon Profil</a><br>
-                        <a type="button" class="btn btn-dark mb-3">Mes Articles</a><br>
-                        <a type="button" class="btn btn-dark mb-3">Mes Favoris</a><br>
-                        <a type="button" class="btn btn-dark mb-3" href="{{ route('post_create') }}">Nouvel Article</a><br>
-                        <a type="button" class="btn btn-dark mb-3">Nouvelle Annonce</a><br>
+                        <a type="button" class="btn btn-dark mb-3 btnSize">Mon Profil</a><br>
+                        <a type="button" class="btn btn-dark mb-3 btnSize">Mes Articles</a><br>
+                        <a type="button" class="btn btn-dark mb-3 btnSize">Mes Favoris</a><br>
+                        <a type="button" class="btn btn-dark mb-3 btnSize" href="{{ route('post_create') }}">Nouvel Article</a><br>
+                        <a type="button" class="btn btn-dark mb-3 btnSize">Nouvelle Annonce</a><br>
                     </div>
                 </div>
-                <main class="col-9">
+                <!-- mobile left side -->
+                <div class="mobilSide text-center" id="sidebar-wrapper">
+                    <div class="divbloc"></div>
+                    <div class="divside">
+                        <h2 class="pt-4 mb-3">{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</h2>
+                        <h3>{{ Auth::user()->promo }}</h3>
+                        <a type="button" class="btn btn-dark mb-3 btnSize" href="">Mon Profil</a><br>
+                        <a type="button" class="btn btn-dark mb-3 btnSize" href="">Mes Articles</a><br>
+                        <a type="button" class="btn btn-dark mb-3 btnSize" href="">Mes Favoris</a><br>
+                        <a type="button" class="btn btn-dark mb-3 btnSize" href="{{ route('post_create') }}">Nouvel Article</a><br>
+                        <a type="button" class="btn btn-dark mb-3 btnSize" href="">Nouvelle Annonce</a><br>
+                    </div>
+                </div>
+
+                <main class="col-md-12 col-lg-9" id="page-content-wrapper">
                     @yield('content')
                 </main>
             </div>

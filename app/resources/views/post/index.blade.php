@@ -2,12 +2,37 @@
 
 @section('content')
 
-<div class="container">
+<div class="container-fluid">
     
     <div class="postCat sticky-top">
-        <div class="lightMain row"></div>
+        <div class="lightMain row">
+        </div>
         <div class="row postNav">
-            <div class="col-8 my-auto">
+            <div class="mobile">
+                <button href="#menu-toggle" id="menu-toggle" class="btn btn-dark" role="button"><i class="fas fa-angle-double-right"></i></button>
+                <div class="mobileDrop">
+                    <form method="POST" action="{{ route('post_category') }}">
+                        @csrf
+                        <div class="form-group row">
+                            <select name="category" id="category">
+                                @foreach($categories as $id => $category)
+                                <option value="{{$category->id}}"
+                                @if ($hisCategory == $category->id)
+                                {{'selected'}}
+                                @endif
+                                >{{$category->name}}</option>
+                                @endforeach
+                            </select>
+                            <button type="submit" title="Valider" class="btn btn-dark ml-2">
+                                Ok
+                            </button>
+                        </div>
+                    </form>
+                </div>     
+            </div>
+            
+
+            <div class="col-8 my-auto mobileCache">
                 <form method="POST" action="{{ route('post_category') }}" aria-label="">
                     @csrf
                     <div class="form-group row">
@@ -28,7 +53,7 @@
                 </form>
             </div>
 
-            <div class="col-4 my-auto">
+            <div class="col-4 my-auto mobileCache">
                 
                 <form method="POST" action="{{ route('post_category') }}" aria-label="">
                     @csrf
@@ -45,7 +70,7 @@
 
     <div class="row articles">
         @foreach ($posts as $post)
-        <div class="col-4">
+        <div class="col-md-12 col-lg-4">
             <div class="card cardArticle my-4 shadow">
                 <img class="card-img-top img1" src="{{ $post->img }}" alt="Card image cap">
                 <div class="card-body">
@@ -62,7 +87,6 @@
             </div> 
         </div>
         @endforeach
-</div>
     </div>
 </div>
 
