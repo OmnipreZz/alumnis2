@@ -69,7 +69,7 @@ li {
 }
 
 .img1 {
-    height: 40vh;
+    height: 35vh;
 }
 
 .img2 {
@@ -123,4 +123,33 @@ li {
 @media (max-width: 576px) {
 
 
+}
+
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////Media Responsiv Table//////////////////////////////// */
+@media 
+only screen and (max-width: 767px) {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
 }

@@ -82,7 +82,7 @@
                     <span class="font-italic">{{ $post->author }}, le {{ date('d/m/Y', strtotime($post->created_at)) }}</span>
                 </div>
                 <div class="text-right">
-                    <a href="{{ route('post_show',$post->id) }}" type="button" class="btn btn-dark">Go</a>
+                    <a href="{{ route('post_show',$post->id) }}" type="button" class="btn btn-dark mr-2 mb-2">Go</a>
                 </div>
             </div> 
         </div>

@@ -16,6 +16,8 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home')->middleware('auth');
 
+Route::get('/membres', 'HomeController@user')->name('user_show')->middleware('auth');
+
 
 Route::get('/articles', 'PostController@index' )->name('post_index')->middleware('auth');
 Route::Post('/articles/categorie','PostController@indexByCat')->name('post_category')->middleware('auth');
