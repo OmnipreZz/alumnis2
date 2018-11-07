@@ -1,31 +1,47 @@
 /* /////////////////// */
 /* ///////// */
 /* ////////////////////////////////App Alumnis//////////////////////////////// */
-.jumbotron {
-    height: 80vh;
-    background-size: cover;
-}
-.homeTitle {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 60px;
-    color: #e80041;
-}
 body {
     background: white;
 }
 
-nav {
-    background-color: #e80041;
+hr {
+    width: 180px;
+    background-color: white;
 }
+
+li {
+    list-style-type: none;
+}
+
 
 .home {
     margin-top: 15vh;
 }
 
+.homeTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    color: #e80041;
+}
+
+.jumbotron {
+    height: 80vh;
+    background-size: cover;
+}
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////Navbar//////////////////////////////// */
+nav {
+    background-color: #e80041;
+}
+
 .navbar-brand {
     font-family: 'Montserrat', sans-serif;
 }
-
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////Sidebar//////////////////////////////// */
 .sidebar {
     height: 100vh;
 }
@@ -39,19 +55,12 @@ nav {
     background-color: #e80041;
 }
 
-hr {
-    width: 180px;
-    background-color: white;
-}
-
-li {
-    list-style-type: none;
-}
-
 .btnSize {
     width: 150px;
 }
-
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////Post//////////////////////////////// */
 .postCat {
     height: 25vh;
 }
@@ -91,14 +100,6 @@ li {
 /* /////////////////// */
 /* ///////// */
 /* ////////////////////////////////@MEDIA//////////////////////////////// */
-@media (max-width: 1200px) {
-
-}
-
-@media (max-width: 992px) {
-    
-}
-
 @media (max-width: 768px) {
 
     .sidebar {
@@ -120,20 +121,12 @@ li {
     .cardArticle {
         height: 75vh;
     }
-
-	
 }
-
-@media (max-width: 576px) {
-
-
-}
-
 /* /////////////////// */
 /* ///////// */
 /* ////////////////////////////////Media Responsiv Table//////////////////////////////// */
 @media 
-only screen and (max-width: 767px) {
+only screen and (max-width: 768px) {
 
 	/* Force table to not be like tables anymore */
 	table, thead, tbody, th, td, tr { 
